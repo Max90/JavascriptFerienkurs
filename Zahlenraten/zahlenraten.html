@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery-2.1.0.js"></script>
+    <script src="zahlenscript.js"></script>
+</head>
+<body>
+<div>
+    <form>
+        <p><label>Minimum
+            <input type="number"/>
+        </label></p>
+
+        <p><label>Maximum
+            <input type="number"/>
+        </label></p>
+
+        <p><label>Zeit in s
+            <input type="number"/>
+        </label></p>
+
+        <p><input type="submit" onclick="submitListener()"/></p>
+    </form>
+</div>
+
+<div id="time-container">
+    <p><label>Verbleibende Zeit
+        <span></span>
+    </label></p>
+
+    <p><label>Anzahl der Versuche
+        <span></span>
+    </label></p>
+
+    <p><label>Zahl wählen
+        <select id="number-select" onchange="selectChanged()"></select>
+    </label></p>
+</div>
+<div id="restart-container">
+    <p>
+        <button id="restart-button" onclick="restartListener()">Neu starten</button>
+    </p>
+    <p><span>Ergebnisse</span></p>
+</div>
+</body>
+</html>
