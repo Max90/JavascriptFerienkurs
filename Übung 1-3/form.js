@@ -6,8 +6,8 @@ var birthDate;
 var tempDate;
 document.getElementById("name").focus();
 function setLPValue() {
-    document.getElementById("lp-iutput").innerHTML = document.getElementById("lp-input").value;
-    if(document.getElementById("lp-input").value < 50)
+    document.getElementById("lp-output").innerHTML = document.getElementById("lp-input").value;
+    if (document.getElementById("lp-input").value < 50)
         document.getElementById("lp-under-min").innerHTML = "Achtung Sie haben unter 50 LP";
     else
         document.getElementById("lp-under-min").innerHTML = ""
@@ -41,8 +41,20 @@ function setSubmitClickable() {
     document.getElementById("submit").disabled = false;
 }
 
-function isAgeAndPasswordVerified(){
-    if(isAgeVerified() && isPasswordMatchingAndNotEmpty())
+function isAgeAndPasswordVerified() {
+    if (isAgeVerified() && isPasswordMatchingAndNotEmpty())
         setSubmitClickable();
 }
 
+$('#submit').on('click', function () {
+    convertInputs();
+});
+
+function convertInputs() {
+    $.each($("input"), function (i, v) {
+        $("<span>").text(" - " + v.value).insertBefore(v);
+        $("input").hide();
+    });
+    $(".pw").hide();
+    $(".pwc").hide();
+}
