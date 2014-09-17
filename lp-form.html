@@ -3,10 +3,11 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+    <script src="jquery-2.1.1.min.js"></script>
 </head>
 <body>
-<form oninput="isAgeAndPasswordVerified()">
-    <label>Name<input id="name" type="text" required="true" pattern="[ a-zA-Z \ - ]+ ,\ s [ a-zA-Z ]+"></label>
+<form oninput="isAgeAndPasswordVerified()" onsubmit="return false;">
+<label>Name<input id="name" type="text" required="true" pattern="[ a-zA-Z \ - ]+ ,\ s [ a-zA-Z ]+"></label>
     <br>
     <label>E-Mail<input type="email" required="true"></label>
     <br>
