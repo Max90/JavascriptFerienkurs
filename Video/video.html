@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery-2.1.0.js"></script>
+    <script src="videoscript.js"></script>
+</head>
+<body>
+
+<video poster="http://rebelsintradition.com/wp-content/uploads/2014/05/bar.jpg" controls ontimeupdate="timeUpdate()"
+       onended="showAlert()">
+    <source src="http://introducinghtml5.com/examples/ch04/leverage-a-synergy.mp4" type="video/mp4">
+    <source src="http://introducinghtml5.com/examples/ch04/leverage-a-synergy.ogv" type="video/ogg">
+</video>
+<button id="slower-button">Langsamer</button>
+<button id="faster-button">Schneller</button>
+<p></p>
+</body>
+</html>
